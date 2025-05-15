@@ -1,28 +1,321 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f5;
-  padding: 20px;
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
+body {
+  background: #f8fafc;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #005f73;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+}
+
+nav ul.nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul.nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+nav ul.nav li a:hover,
+nav ul.nav li a:focus {
+  background-color: #0a9396;
+  color: #e0fbfc;
+  outline: none;
+}
+
+nav ul.nav li a.active {
+  background-color: #94d2bd;
+  color: #001219;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: 0 0 10px #94d2bdaa;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Hero Section on Home */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #e9f1f7;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero img {
+  width: 50%;
+  border-radius: 15px;
+  object-fit: cover;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #005f73;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Button style only for volunteer call to action */
+.btn {
+  display: inline-block;
+  background-color: #0a9396;
+  color: #e0fbfc;
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.25s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #94d2bd;
+  color: #001219;
+  box-shadow: 0 0 15px #94d2bdaa;
+  outline: none;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0a9396;
+}
+
+section p {
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* About page grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.about-grid img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+/* Core Values list styling */
+.values-list {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  color: #2f6f4e;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.values-list li {
+  margin-bottom: 0.7rem;
+}
+
+/* Projects Table */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0 3rem 0;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
+thead {
+  background-color: #005f73;
+  color: #e0fbfc;
+}
+
+thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f5f7;
+}
+
+tbody td {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #94d2bdcc;
+  cursor: pointer;
+}
+
+/* Lists in projects page */
+ol {
+  padding-left: 1.6rem;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+/* Form styling */
+form {
+  max-width: 600px;
+  margin-top: 1rem;
+  background: #e9f1f7;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #005f73;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border: 1.5px solid #94d2bd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #0a9396;
+  outline: none;
+  box-shadow: 0 0 6px #0a9396aa;
+}
+
+form button.btn {
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem;
+}
+
+.gallery-grid figure {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  background: #fff;
   text-align: center;
 }
 
-th {
-  background-color: #4CAF50;
-  color: white;
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
-tr:hover {
-  background-color: #e6f7ff;
-} /* <-- pseudo-class used here */
+.gallery-grid figcaption {
+  padding: 0.7rem 1rem 1rem;
+  font-weight: 600;
+  color: #0a9396;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #001219;
+  color: #94d2bd;
+  font-weight: 600;
+  margin-top: auto;
+  user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero img, .hero-text {
+    width: 100%;
+  }
+  nav ul.nav {
+    justify-content: center;
+  }
+}

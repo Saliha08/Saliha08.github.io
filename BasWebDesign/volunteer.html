@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Volunteer - Helping Hands</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>Helping Hands Volunteer Group</h1>
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="volunteer.html" class="active">Volunteer</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>Volunteer With Us</h2>
+    <p>Ready to give back? We welcome volunteers of all ages and skill levels. Fill out the form below to get started!</p>
+
+    <form action="#" method="post" aria-label="Volunteer sign-up form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="interest">Areas of Interest:</label>
+      <select id="interest" name="interest" required>
+        <option value="">--Select--</option>
+        <option value="cleanup">Neighborhood Cleanup</option>
+        <option value="fooddrive">Food Drive</option>
+        <option value="tutoring">After-School Tutoring</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="availability">Availability:</label>
+      <textarea id="availability" name="availability" rows="3" placeholder="Days and times you are available"></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2025 Helping Hands Volunteer Group</p>
+</footer>
+</body>
+</html>

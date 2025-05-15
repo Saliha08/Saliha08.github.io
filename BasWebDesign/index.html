@@ -1,120 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CSS3 Image Effects</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f0f0f0;
-      padding: 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .image-box {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .image-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Penguin: Sepia */
-    .penguin img {
-      filter: sepia(100%);
-    }
-
-    /* Football Field: Grayscale */
-    .football img {
-      filter: grayscale(100%);
-    }
-
-    /* Dinosaur: Shifted to blue with hue rotation */
-    .dinosaur img {
-      filter: hue-rotate(180deg);
-    }
-
-    /* Seagull on blue-to-white gradient background */
-    .seagull {
-      background: linear-gradient(to bottom, #87cefa, white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .seagull img {
-      width: 100%;
-      height: auto;
-    }
-
-    /* Butterfly: Blue/white tone */
-    .butterfly img {
-      filter: hue-rotate(200deg) brightness(1.2) saturate(0.8);
-    }
-
-    /* Theater Stage: Blurred image with sharp text */
-    .stage {
-      position: relative;
-    }
-
-    .stage img {
-      filter: blur(5px);
-    }
-
-    .stage-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2em;
-      font-weight: bold;
-      text-shadow: 0 2px 5px black;
-      z-index: 1;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Helping Hands Volunteer Group</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <h1>CSS3 Image Effects</h1>
-
-  <div class="grid">
-    <!-- Row 1 -->
-    <div class="image-box penguin">
-      <img src="penguins.jpg" alt="Penguin">
+<header>
+  <h1>Helping Hands Volunteer Group</h1>
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <img src="https://regenbrampton.com/wp-content/uploads/2023/08/How-Does-Volunteering-Help-the-Community_-Hero.jpg" alt="Volunteers helping in the community" />
+    <div class="hero-text">
+      <h2>Making a Difference Together</h2>
+      <p>Join Helping Hands as we build a stronger, kinder community.</p>
+      <a href="volunteer.html" class="btn">Become a Volunteer</a>
     </div>
-    <div class="image-box football">
-      <img src="football_field.jpg" alt="Football Field">
-    </div>
-    <div class="image-box dinosaur">
-      <img src="dinosaur.png" alt="Dinosaur">
-    </div>
-
-    <!-- Row 2 -->
-    <div class="image-box seagull">
-      <img src="seagull.png" alt="Seagull">
-    </div>
-    <div class="image-box butterfly">
-      <img src="butterfly.jpg" alt="Butterfly">
-    </div>
-    <div class="image-box stage">
-      <img src="theater_stage.jpg" alt="Theater Stage">
-      <div class="stage-text">Presenting</div>
-    </div>
-  </div>
-
+  </section>
+  <section>
+    <h2>Our Mission</h2>
+    <p>Helping Hands is a community-based volunteer group dedicated to supporting local families, cleaning neighborhoods, and promoting education and well-being.</p>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2025 Helping Hands Volunteer Group</p>
+</footer>
 </body>
 </html>
